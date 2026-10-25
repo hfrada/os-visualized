@@ -10,10 +10,33 @@
   --color-ink: #2b2b2b;
   --color-muted: #737373;
   --color-faint: #a3a3a3;
+  --color-highlight: #ffe95c8c;
+  --color-highlight-soft: #ffe95c40;
+  --color-marker: #e03131;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@utility enter {
+  animation: enter 0.35s ease-out backwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-name: fade-in;
+  }
 }
 
 @utility sketch-border {
-  position: relative;
   border: 2px solid var(--color-ink);
   border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
 
@@ -29,12 +52,36 @@
   }
 }
 
+@utility sketch-outline {
+  border: 2px solid var(--color-ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+@utility scribble-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -1px;
+    left: -4px;
+    height: 9px;
+    background: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6.5C20 4 38 7 55 5s30-2.5 43-1M8 8.6c22-2 50-1.4 84-3.4' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E")
+      no-repeat center / 100% 100%;
+  }
+}
+
 @layer base {
   [data-theme="dark"] {
     --color-paper: #2b3a35;
     --color-ink: #f0efe9;
     --color-muted: #b3c0ba;
     --color-faint: #7d8c86;
+    --color-highlight: #ffe95c4d;
+    --color-highlight-soft: #ffe95c24;
+    --color-marker: #ff8a80;
     color-scheme: dark;
   }
 

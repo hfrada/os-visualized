@@ -12,5 +12,56 @@
   },
   "toolbar": {
     "darkMode": "Mode gelap"
+  },
+  "source": {
+    "basedOn": "berdasarkan"
+  },
+  "pager": {
+    "previous": "sebelumnya",
+    "next": "berikutnya"
+  },
+  "playback": {
+    "start": "mulai",
+    "stop": "berhenti",
+    "delay": "jeda",
+    "seconds": "{{value, number}} dtk"
+  },
+  "topics": {
+    "computerSystemLayers": {
+      "title": "Lapisan Sistem Komputer",
+      "views": {
+        "onion": "lingkaran",
+        "stack": "tumpukan"
+      },
+      "hint": "pilih salah satu lapisan",
+      "user": "User {{number}}",
+      "layers": {
+        "user": {
+          "name": "User",
+          "detail": "User 1–4"
+        },
+        "app": {
+          "name": "Program Aplikasi",
+          "detail": "compiler, assembler, text editor, basis data, games, program bisnis"
+        },
+        "os": {
+          "name": "Sistem Operasi",
+          "detail": "interface antara pemakai dan hardware"
+        },
+        "hw": {
+          "name": "Hardware",
+          "detail": "CPU, memori, perangkat I/O, sistem bus"
+        }
+      },
+      "steps": {
+        "press": "User 1 menekan Ctrl+S di text editor",
+        "request": "text editor minta OS menyimpan file",
+        "command": "OS menyuruh hardware (disk) menulis data",
+        "write": "disk selesai menulis",
+        "reply": "OS memberi kabar ke text editor: berhasil",
+        "show": "text editor menampilkan \"tersimpan\"",
+        "see": "User 1 melihat filenya sudah tersimpan"
+      }
+    }
   }
 }

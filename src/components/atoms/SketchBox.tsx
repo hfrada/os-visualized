@@ -1,20 +1,17 @@
 import type { ComponentProps } from 'react'
-
-export type Tilt = 'left' | 'right'
-
-const tiltClasses: Record<Tilt, string> = {
-  left: '-rotate-1 hover:rotate-[0.5deg]',
-  right: 'rotate-[0.8deg] hover:-rotate-[0.5deg]',
-}
+import { tiltClasses, tiltHoverClasses, type Tilt } from './tilt'
 
 type SketchBoxProps = ComponentProps<'div'> & {
   tilt?: Tilt
+  interactive?: boolean
 }
 
-export function SketchBox({ tilt = 'left', className = '', ...props }: SketchBoxProps) {
+export function SketchBox({ tilt = 'left', interactive = true, className = '', ...props }: SketchBoxProps) {
+  const hover = interactive ? `hover:scale-103 ${tiltHoverClasses[tilt]}` : ''
+
   return (
     <div
-      className={`sketch-border bg-paper transition duration-150 hover:scale-103 ${tiltClasses[tilt]} ${className}`}
+      className={`sketch-border relative bg-paper transition duration-150 ${tiltClasses[tilt]} ${hover} ${className}`}
       {...props}
     />
   )

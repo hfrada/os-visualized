@@ -12,5 +12,56 @@
   },
   "toolbar": {
     "darkMode": "Dark mode"
+  },
+  "source": {
+    "basedOn": "based on"
+  },
+  "pager": {
+    "previous": "previous",
+    "next": "next"
+  },
+  "playback": {
+    "start": "start",
+    "stop": "stop",
+    "delay": "delay",
+    "seconds": "{{value, number}} s"
+  },
+  "topics": {
+    "computerSystemLayers": {
+      "title": "Computer System Layers",
+      "views": {
+        "onion": "onion",
+        "stack": "stack"
+      },
+      "hint": "pick a layer",
+      "user": "User {{number}}",
+      "layers": {
+        "user": {
+          "name": "User",
+          "detail": "User 1–4"
+        },
+        "app": {
+          "name": "Application Programs",
+          "detail": "compiler, assembler, text editor, database, games, business programs"
+        },
+        "os": {
+          "name": "Operating System",
+          "detail": "interface between the user and the hardware"
+        },
+        "hw": {
+          "name": "Hardware",
+          "detail": "CPU, memory, I/O devices, system bus"
+        }
+      },
+      "steps": {
+        "press": "User 1 presses Ctrl+S in a text editor",
+        "request": "the text editor asks the OS to save the file",
+        "command": "the OS tells the hardware (disk) to write the data",
+        "write": "the disk finishes writing",
+        "reply": "the OS tells the text editor it worked",
+        "show": "the text editor shows \"saved\"",
+        "see": "User 1 sees the file has been saved"
+      }
+    }
   }
 }

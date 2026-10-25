@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react'
 import { Subtitle } from '../atoms/Subtitle'
 import { Title } from '../atoms/Title'
 
 type PageHeadingProps = {
-  title: string
+  title: ReactNode
   subtitle: string
 }
 

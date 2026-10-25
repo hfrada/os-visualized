@@ -1,33 +1,27 @@
 import { useTranslation } from 'react-i18next'
 import { PageHeading } from '../components/molecules/PageHeading'
+import { Wordmark } from '../components/molecules/Wordmark'
 import { SectionGrid } from '../components/organisms/SectionGrid'
 import { Toolbar } from '../components/organisms/Toolbar'
 import { HomeTemplate } from '../components/templates/HomeTemplate'
-import { useTheme } from '../hooks/useTheme'
-import { languages } from '../i18n'
-
-const sectionKeys = ['fundamentals', 'processes', 'memory', 'storage', 'caseStudies'] as const
+import { useToolbar } from '../hooks/useToolbar'
+import { sectionPath, sections } from '../sections'
 
 export function HomePage() {
-  const { t, i18n } = useTranslation()
-  const { theme, toggleTheme } = useTheme()
+  const { t } = useTranslation()
+  const toolbar = useToolbar()
 
-  const sections = sectionKeys.map((key) => ({ key, label: t(`sections.${key}`) }))
+  const cards = sections.map((section) => ({
+    key: section.key,
+    label: t(`sections.${section.key}`),
+    to: section.topics.length > 0 ? sectionPath(section) : undefined,
+  }))
 
   return (
     <HomeTemplate
-      toolbar={
-        <Toolbar
-          languages={languages}
-          currentLanguage={i18n.resolvedLanguage}
-          onLanguageChange={(language) => i18n.changeLanguage(language)}
-          isDark={theme === 'dark'}
-          themeLabel={t('toolbar.darkMode')}
-          onThemeToggle={toggleTheme}
-        />
-      }
-      heading={<PageHeading title={t('home.title')} subtitle={t('home.subtitle')} />}
-      content={<SectionGrid sections={sections} />}
+      toolbar={<Toolbar {...toolbar} />}
+      heading={<PageHeading title={<Wordmark text={t('home.title')} />} subtitle={t('home.subtitle')} />}
+      content={<SectionGrid sections={cards} />}
     />
   )
 }
