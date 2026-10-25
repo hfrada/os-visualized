@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Kalam", cursive;
+  --font-note: "Patrick Hand", cursive;
+  --color-paper: #ffffff;
+  --color-ink: #2b2b2b;
+  --color-muted: #737373;
+  --color-faint: #a3a3a3;
+}
+
+@utility sketch-border {
+  position: relative;
+  border: 2px solid var(--color-ink);
+  border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -4px 2px 3px -3px;
+    border: 1.5px solid var(--color-ink);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    opacity: 0.45;
+    pointer-events: none;
+    transition: inherit;
+  }
+}
+
+@layer base {
+  [data-theme="dark"] {
+    --color-paper: #2b3a35;
+    --color-ink: #f0efe9;
+    --color-muted: #b3c0ba;
+    --color-faint: #7d8c86;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased transition-colors;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "OSVisualized",
+    "subtitle": "coretan tentang sistem operasi"
+  },
+  "sections": {
+    "fundamentals": "Dasar",
+    "processes": "Proses",
+    "memory": "Memori",
+    "storage": "Penyimpanan & Berkas",
+    "caseStudies": "Studi Kasus"
+  },
+  "toolbar": {
+    "darkMode": "Mode gelap"
+  }
+}

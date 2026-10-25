@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "OSVisualized",
+    "subtitle": "doodles about operating systems"
+  },
+  "sections": {
+    "fundamentals": "Fundamentals",
+    "processes": "Processes",
+    "memory": "Memory",
+    "storage": "Storage & Files",
+    "caseStudies": "Case Studies"
+  },
+  "toolbar": {
+    "darkMode": "Dark mode"
+  }
+}
