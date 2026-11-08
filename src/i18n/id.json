@@ -62,6 +62,66 @@
         "show": "text editor menampilkan \"tersimpan\"",
         "see": "User 1 melihat filenya sudah tersimpan"
       }
+    },
+    "whoNeedsToKnow": {
+      "title": "Siapa Perlu Tahu Sampai Mana",
+      "hint": "pilih peran",
+      "rungs": {
+        "app": "Program Aplikasi",
+        "util": "Utilities",
+        "os": "Sistem Operasi",
+        "hw": "Hardware Komputer"
+      },
+      "people": {
+        "user": {
+          "name": "Pengguna",
+          "reason": "baginya komputer hanyalah kumpulan aplikasi"
+        },
+        "programmer": {
+          "name": "Programmer",
+          "reason": "perlu utility untuk membuat aplikasi dengan instruksi bahasa mesin"
+        },
+        "designer": {
+          "name": "Desainer SO",
+          "reason": "harus tahu cara kerja hardware"
+        }
+      }
+    },
+    "osDefinitions": {
+      "title": "Tujuh Definisi SO",
+      "showAll": "buka semua",
+      "hideAll": "tutup semua",
+      "closing": "Tidak ada definisi yang paling tepat. Lebih mudah mendefinisikan SO dari <mark>apa yang dikerjakannya</mark> daripada dari apa SO itu sendiri.",
+      "cards": {
+        "hardwareController": {
+          "name": "Pengontrol hardware",
+          "definition": "software yang mengontrol hardware, hanya berupa program biasa (seperti beberapa file pada DOS)"
+        },
+        "abstraction": {
+          "name": "Abstraksi",
+          "definition": "program yang menjadikan hardware lebih mudah digunakan"
+        },
+        "workOrganizer": {
+          "name": "Pengatur kerja",
+          "definition": "kumpulan program yang mengatur kerja hardware, contoh: melayani permintaan pemakai"
+        },
+        "resourceManager": {
+          "name": "Resource manager",
+          "definition": "resource manager/allocator, contoh: mengatur memori, printer, dll."
+        },
+        "controlProgram": {
+          "name": "Program pengontrol",
+          "definition": "program yang digunakan untuk mengontrol program lainnya"
+        },
+        "kernel": {
+          "name": "Kernel",
+          "definition": "program yang terus-menerus beroperasi selama komputer hidup"
+        },
+        "guardian": {
+          "name": "Guardian",
+          "definition": "menjaga komputer dari berbagai kejahatan komputer"
+        }
+      }
     }
   }
 }

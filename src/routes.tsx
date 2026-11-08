@@ -2,12 +2,16 @@ import type { ComponentType } from 'react'
 import { createBrowserRouter, type RouteObject } from 'react-router'
 import { ComputerSystemLayersPage } from './pages/ComputerSystemLayersPage'
 import { HomePage } from './pages/HomePage'
+import { OsDefinitionsPage } from './pages/OsDefinitionsPage'
 import { SectionPage } from './pages/SectionPage'
+import { WhoNeedsToKnowPage } from './pages/WhoNeedsToKnowPage'
 import { RootLayout } from './RootLayout'
 import { sectionPath, sections, topicPath, type TopicKey } from './sections'
 
 const topicPages: Record<TopicKey, ComponentType> = {
   computerSystemLayers: ComputerSystemLayersPage,
+  whoNeedsToKnow: WhoNeedsToKnowPage,
+  osDefinitions: OsDefinitionsPage,
 }
 
 const sectionRoutes: RouteObject[] = sections

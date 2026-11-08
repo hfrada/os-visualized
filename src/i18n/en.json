@@ -62,6 +62,66 @@
         "show": "the text editor shows \"saved\"",
         "see": "User 1 sees the file has been saved"
       }
+    },
+    "whoNeedsToKnow": {
+      "title": "Who Needs to Know What",
+      "hint": "pick a role",
+      "rungs": {
+        "app": "Application Programs",
+        "util": "Utilities",
+        "os": "Operating System",
+        "hw": "Computer Hardware"
+      },
+      "people": {
+        "user": {
+          "name": "User",
+          "reason": "to them, a computer is just a bunch of applications"
+        },
+        "programmer": {
+          "name": "Programmer",
+          "reason": "needs utilities to build applications with machine-language instructions"
+        },
+        "designer": {
+          "name": "OS designer",
+          "reason": "has to know how the hardware works"
+        }
+      }
+    },
+    "osDefinitions": {
+      "title": "Seven Definitions of an OS",
+      "showAll": "show all",
+      "hideAll": "hide all",
+      "closing": "There's no single best definition. It's easier to define an OS by <mark>what it does</mark> than by what it is.",
+      "cards": {
+        "hardwareController": {
+          "name": "Hardware controller",
+          "definition": "software that controls the hardware, just an ordinary program (like some files in DOS)"
+        },
+        "abstraction": {
+          "name": "Abstraction",
+          "definition": "a program that makes the hardware easier to use"
+        },
+        "workOrganizer": {
+          "name": "Work organizer",
+          "definition": "a set of programs that manages how the hardware works, e.g. serving user requests"
+        },
+        "resourceManager": {
+          "name": "Resource manager",
+          "definition": "a resource manager/allocator, e.g. managing memory, printers, etc."
+        },
+        "controlProgram": {
+          "name": "Control program",
+          "definition": "a program used to control other programs"
+        },
+        "kernel": {
+          "name": "Kernel",
+          "definition": "a program that keeps running the whole time the computer is on"
+        },
+        "guardian": {
+          "name": "Guardian",
+          "definition": "keeps the computer safe from all kinds of computer crime"
+        }
+      }
     }
   }
 }

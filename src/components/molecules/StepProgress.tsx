@@ -3,14 +3,21 @@ import { sketchCircle } from '../../lib/sketch'
 type StepProgressProps = {
   total: number
   current: number
-  caption: string
+  caption?: string
+  inline?: boolean
 }
 
 const gap = 22
 
-export function StepProgress({ total, current, caption }: StepProgressProps) {
+export function StepProgress({ total, current, caption, inline = false }: StepProgressProps) {
+  const count = (
+    <span className="font-hand text-base text-muted">
+      {current + 1}/{total}
+    </span>
+  )
+
   return (
-    <div className="pl-1">
+    <div className={inline ? 'flex items-center gap-2' : 'pl-1'}>
       <svg width={total * gap} height="20" viewBox={`0 0 ${total * gap} 20`} aria-hidden="true">
         {Array.from({ length: total }, (_, index) => {
           const cx = gap / 2 + index * gap
@@ -23,12 +30,14 @@ export function StepProgress({ total, current, caption }: StepProgressProps) {
           )
         })}
       </svg>
-      <p aria-live="polite" className="mt-2.5 font-note text-xl leading-snug">
-        <span className="mr-2 font-hand text-base text-muted">
-          {current + 1}/{total}
-        </span>
-        {caption}
-      </p>
+      {inline ? (
+        <span aria-live="polite">{count}</span>
+      ) : (
+        <p aria-live="polite" className="mt-2.5 font-note text-xl leading-snug">
+          <span className="mr-2">{count}</span>
+          {caption}
+        </p>
+      )}
     </div>
   )
 }

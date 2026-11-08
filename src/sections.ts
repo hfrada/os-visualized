@@ -1,5 +1,5 @@
 export type SectionKey = 'fundamentals' | 'processes' | 'memory' | 'storage' | 'caseStudies'
-export type TopicKey = 'computerSystemLayers'
+export type TopicKey = 'computerSystemLayers' | 'whoNeedsToKnow' | 'osDefinitions'
 
 export type Topic = {
   key: TopicKey
@@ -26,6 +26,8 @@ export const sections: Section[] = [
         slug: 'computer-system-layers',
         source: { author: 'Silberschatz et al.', work: 'Operating System Concepts' },
       },
+      { key: 'whoNeedsToKnow', slug: 'who-needs-to-know' },
+      { key: 'osDefinitions', slug: 'os-definitions' },
     ],
   },
   { key: 'processes', slug: 'processes', topics: [] },

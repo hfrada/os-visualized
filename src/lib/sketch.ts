@@ -89,6 +89,25 @@ function sketchLine(x1: number, y1: number, x2: number, y2: number, random: () =
   return `M${round(startX)},${round(startY)} Q${round(mx)},${round(my)} ${round(endX)},${round(endY)}`
 }
 
+export function sketchArrow(x1: number, y1: number, x2: number, y2: number, seed: number) {
+  const random = createRandom(seed)
+  const length = Math.hypot(x2 - x1, y2 - y1)
+  const ux = (x2 - x1) / length
+  const uy = (y2 - y1) / length
+  const bow = (random() - 0.5) * length * 0.08
+  const mx = (x1 + x2) / 2 - uy * bow
+  const my = (y1 + y2) / 2 + ux * bow
+  const tail = Math.hypot(x2 - mx, y2 - my)
+  const ex = (x2 - mx) / tail
+  const ey = (y2 - my) / tail
+  const head = (angle: number) => {
+    const hx = x2 - (ex * Math.cos(angle) - ey * Math.sin(angle)) * 11
+    const hy = y2 - (ex * Math.sin(angle) + ey * Math.cos(angle)) * 11
+    return `M${round(hx)},${round(hy)} L${round(x2)},${round(y2)}`
+  }
+  return `M${round(x1)},${round(y1)} Q${round(mx)},${round(my)} ${round(x2)},${round(y2)} ${head(0.45)} ${head(-0.45)}`
+}
+
 export function sketchRect(x: number, y: number, width: number, height: number, seed: number) {
   const random = createRandom(seed)
   return [
