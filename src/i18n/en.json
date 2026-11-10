@@ -122,6 +122,74 @@
           "definition": "keeps the computer safe from all kinds of computer crime"
         }
       }
+    },
+    "osRoles": {
+      "title": "Three Roles of an Operating System",
+      "quote": "An operating system is the layer of software that manages a computer's resources for its users and their applications.",
+      "roles": {
+        "referee": {
+          "tab": "referee",
+          "name": "Referee",
+          "term": "",
+          "summary": "The OS shares resources among the applications on one computer and keeps them apart. A bug in one doesn't damage the others."
+        },
+        "illusionist": {
+          "tab": "illusionist",
+          "name": "Illusionist",
+          "term": "",
+          "summary": "The OS hides the hardware's limits: each application seems to have its own processor and almost unlimited memory."
+        },
+        "glue": {
+          "tab": "glue",
+          "name": "Glue",
+          "term": "",
+          "summary": "The OS provides services every application shares, such as copy and paste, and files that other applications can open."
+        }
+      },
+      "hints": {
+        "crash": "pick an application to crash it",
+        "restart": "pick the crashed application to start it again",
+        "openCurtain": "open the curtain",
+        "closeCurtain": "close the curtain"
+      },
+      "diagram": {
+        "apps": {
+          "editor": "Editor",
+          "chat": "Chat",
+          "music": "Music"
+        },
+        "os": "Operating System",
+        "cpu": "CPU",
+        "memory": "Memory",
+        "disk": "Disk",
+        "paintedCpu": "CPU",
+        "paintedMemory": "memory",
+        "word": "hello",
+        "file": "notes.txt",
+        "curtain": "curtain"
+      },
+      "steps": {
+        "referee": {
+          "running": "Editor, Chat, and Music run side by side on the same computer",
+          "bug": "Chat hits a bug and crashes",
+          "isolate": "the OS isolates Chat, so Editor and Music keep running",
+          "restart": "the OS stops Chat and starts it again from scratch"
+        },
+        "illusionist": {
+          "illusion": "each application seems to have its own CPU and memory",
+          "reveal": "the curtain opens: there's only one CPU",
+          "turns": "the CPU takes turns: Editor, Chat, Music, then around again (slowed down here)",
+          "memory": "there's only one memory too, limited and split among all three",
+          "fast": "in reality the turns are so fast that, from in front of the curtain, everything seems to run at once"
+        },
+        "glue": {
+          "copy": "\"hello\" is copied in Editor",
+          "clipboard": "the OS keeps it on the clipboard",
+          "paste": "\"hello\" is pasted into Chat",
+          "save": "Editor saves notes.txt to the disk through the OS",
+          "open": "Chat opens the same file through the OS"
+        }
+      }
     }
   }
 }

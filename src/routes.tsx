@@ -3,6 +3,7 @@ import { createBrowserRouter, type RouteObject } from 'react-router'
 import { ComputerSystemLayersPage } from './pages/ComputerSystemLayersPage'
 import { HomePage } from './pages/HomePage'
 import { OsDefinitionsPage } from './pages/OsDefinitionsPage'
+import { OsRolesPage } from './pages/OsRolesPage'
 import { SectionPage } from './pages/SectionPage'
 import { WhoNeedsToKnowPage } from './pages/WhoNeedsToKnowPage'
 import { RootLayout } from './RootLayout'
@@ -12,6 +13,7 @@ const topicPages: Record<TopicKey, ComponentType> = {
   computerSystemLayers: ComputerSystemLayersPage,
   whoNeedsToKnow: WhoNeedsToKnowPage,
   osDefinitions: OsDefinitionsPage,
+  osRoles: OsRolesPage,
 }
 
 const sectionRoutes: RouteObject[] = sections

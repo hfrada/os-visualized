@@ -122,6 +122,74 @@
           "definition": "menjaga komputer dari berbagai kejahatan komputer"
         }
       }
+    },
+    "osRoles": {
+      "title": "Tiga Peran Sistem Operasi",
+      "quote": "Sistem operasi adalah lapisan perangkat lunak yang mengelola sumber daya komputer untuk pengguna dan aplikasinya.",
+      "roles": {
+        "referee": {
+          "tab": "wasit",
+          "name": "Wasit",
+          "term": "referee",
+          "summary": "SO membagi sumber daya ke aplikasi-aplikasi di satu komputer dan memisahkan mereka. Bug di satu aplikasi tidak merusak aplikasi lain."
+        },
+        "illusionist": {
+          "tab": "ilusionis",
+          "name": "Ilusionis",
+          "term": "illusionist",
+          "summary": "SO menyembunyikan keterbatasan hardware: tiap aplikasi seolah punya prosesor sendiri dan memori yang hampir tak terbatas."
+        },
+        "glue": {
+          "tab": "perekat",
+          "name": "Perekat",
+          "term": "glue",
+          "summary": "SO menyediakan layanan bersama untuk semua aplikasi, misalnya salin-tempel dan file yang bisa dibuka aplikasi lain."
+        }
+      },
+      "hints": {
+        "crash": "pilih aplikasi untuk membuatnya crash",
+        "restart": "pilih aplikasi yang crash untuk menjalankannya lagi",
+        "openCurtain": "buka tirainya",
+        "closeCurtain": "tutup tirainya"
+      },
+      "diagram": {
+        "apps": {
+          "editor": "Editor",
+          "chat": "Chat",
+          "music": "Musik"
+        },
+        "os": "Sistem Operasi",
+        "cpu": "CPU",
+        "memory": "Memori",
+        "disk": "Disk",
+        "paintedCpu": "CPU",
+        "paintedMemory": "memori",
+        "word": "halo",
+        "file": "catatan.txt",
+        "curtain": "tirai"
+      },
+      "steps": {
+        "referee": {
+          "running": "Editor, Chat, dan Musik berjalan bersamaan di komputer yang sama",
+          "bug": "Chat kena bug lalu crash",
+          "isolate": "SO mengisolasi Chat, jadi Editor dan Musik tetap berjalan",
+          "restart": "SO menghentikan Chat, lalu menjalankannya lagi dari awal"
+        },
+        "illusionist": {
+          "illusion": "tiap aplikasi seolah punya CPU dan memori sendiri",
+          "reveal": "tirai dibuka: ternyata CPU-nya cuma satu",
+          "turns": "CPU dipakai bergantian: Editor, Chat, Musik, lalu ulang lagi (di sini diperlambat)",
+          "memory": "memorinya juga cuma satu dan terbatas, dibagi untuk ketiganya",
+          "fast": "aslinya gantiannya sangat cepat, jadi dari depan tirai semuanya tampak berjalan bersamaan"
+        },
+        "glue": {
+          "copy": "\"halo\" disalin di Editor",
+          "clipboard": "SO menyimpannya di clipboard",
+          "paste": "\"halo\" ditempel di Chat",
+          "save": "Editor menyimpan catatan.txt ke disk lewat SO",
+          "open": "Chat membuka file yang sama lewat SO"
+        }
+      }
     }
   }
 }

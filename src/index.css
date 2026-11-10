@@ -13,6 +13,13 @@
   --color-highlight: #ffe95c8c;
   --color-highlight-soft: #ffe95c40;
   --color-marker: #e03131;
+  --animate-fade-in: fade-in 0.3s ease-out both;
+  --animate-travel: travel 750ms ease-in-out 120ms both;
+  --animate-travel-via: travel-via 750ms ease-in-out 120ms both;
+  --animate-crash: crash 0.5s ease-out forwards;
+  --animate-reopen: reopen 0.5s ease-out;
+  --animate-bump: bump 1.2s ease-in-out;
+  --animate-flash: flash 0.9s ease-out both;
 }
 
 @keyframes enter {
@@ -25,6 +32,81 @@
 @keyframes fade-in {
   from {
     opacity: 0;
+  }
+}
+
+@keyframes travel {
+  from {
+    opacity: 0;
+    transform: translate(var(--from-x), var(--from-y));
+  }
+  15% {
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--to-x), var(--to-y));
+  }
+}
+
+@keyframes travel-via {
+  from {
+    opacity: 0;
+    transform: translate(var(--from-x), var(--from-y));
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--via-x), var(--via-y));
+  }
+  to {
+    transform: translate(var(--to-x), var(--to-y));
+  }
+}
+
+@keyframes crash {
+  25% {
+    transform: rotate(-4deg);
+  }
+  55% {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-1.5deg);
+  }
+}
+
+@keyframes reopen {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes bump {
+  45%,
+  65% {
+    transform: translateX(var(--bump-x));
+  }
+  55% {
+    transform: translateX(calc(var(--bump-x) * 0.85));
+  }
+}
+
+@keyframes flash {
+  from,
+  to {
+    opacity: 0;
+  }
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes bar-fill {
+  from {
+    transform: scaleX(0);
   }
 }
 

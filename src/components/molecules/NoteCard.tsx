@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 type NoteCardProps = {
-  title?: string
+  title?: ReactNode
   children: ReactNode
 }
 

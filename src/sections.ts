@@ -1,5 +1,5 @@
 export type SectionKey = 'fundamentals' | 'processes' | 'memory' | 'storage' | 'caseStudies'
-export type TopicKey = 'computerSystemLayers' | 'whoNeedsToKnow' | 'osDefinitions'
+export type TopicKey = 'computerSystemLayers' | 'whoNeedsToKnow' | 'osDefinitions' | 'osRoles'
 
 export type Topic = {
   key: TopicKey
@@ -28,6 +28,11 @@ export const sections: Section[] = [
       },
       { key: 'whoNeedsToKnow', slug: 'who-needs-to-know' },
       { key: 'osDefinitions', slug: 'os-definitions' },
+      {
+        key: 'osRoles',
+        slug: 'os-roles',
+        source: { author: 'Anderson & Dahlin', work: 'Operating Systems: Principles and Practice' },
+      },
     ],
   },
   { key: 'processes', slug: 'processes', topics: [] },
